@@ -1,0 +1,79 @@
+extends common/layout
+
+block content 
+  main
+    section
+      h2 How Dreamshare works?
+      .info
+        .info__block.first
+          .info__block_text
+            | Quisque libero libero, dictum non turpis in, luctus semper lorem.
+            | Donec rhoncus a leo sit amet facilisis.
+          .info__block_title Sed leo enim, condimentum
+          .info__block_step Step 1
+        .info__block.second
+          .info__block_text.second-text
+            | Nulla venenatis tempor dui in molestie. Nulla quis dictum
+            | purus, sit amet porttitor est.
+          .info__block_title.second-title Morbi velit risus
+          .info__block_step Step 2
+        .info__block.third
+          .info__block_text
+            | Quisque libero libero, dictum non turpis in, luctus semper lorem.
+            | Donec rhoncus a leo sit amet facilisis.
+          .info__block_title Sed leo enim, condimentum
+          .info__block_step Step 3
+    section
+        h2 Meet a partner for your best holiday
+        .partner
+          .partner__block.bottom-margin
+            .partner__block_photo.one
+            .partner__block_name Bradley Hunter
+            .partner__block_biography Based in Chicago. I love playing tennis and loud music.
+          .partner__block.bottom-margin
+            .partner__block_photo.three
+            .partner__block_name Diana Wells
+            .partner__block_biography
+              | Living in Athens, Greece. I love black and white classics,
+              | chillout music and green tea.
+          .partner__block.margin-smallscreen
+            .partner__block_photo.two
+            .partner__block_name Marie Bennett
+            .partner__block_biography
+              | Currently living in Colorado. Lover of art, languages and
+              | travelling.
+          .partner__block
+            .partner__block_photo.four
+            .partner__block_name Christopher Pierce
+            .partner__block_biography
+              | Star Wars fanatic. I have a persistent enthusiasm to create
+              | new things.
+        button.see__button(type='button') See other partners
+    section
+      h2.small-screen Discover holiday activity ideas
+      .ideas
+        .ideas__first
+          .ideas__first_sport
+            h2 Sports and Activis
+          .ideas__first_health
+            h2 Wellness and Health
+          .ideas__first_extreme
+            h2.extreme
+              | Extreme Sports
+              | and Expeditions
+        .ideas__second
+          .ideas__second_games
+            h2 Games
+          .ideas__second_culture
+            h2 Culture and Education
+        .ideas__third
+          .ideas__third_relax
+            h2 Enjomet and Relaxation
+          .ideas__third_travel
+            h2 Travelling
+    section
+      h2 Crate your holiday activity
+      .text
+        | Hi! What are your holiday interests?
+      input(type='text', placeholder='Enter your insterests')
+      button.search(type='button') Search partners

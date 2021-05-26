@@ -1,0 +1,854 @@
+@import 'base/base';
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/mixin';
+
+body {
+    font-family: $text-mont-bold;
+}
+
+header {
+    @include size (100%, 700px);
+    background-image: url('../images/Background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: $color-text;
+}
+
+.navbar {
+    padding-top: 46px;
+    margin-left: -30px;
+    display: flex;
+    justify-content: space-around;
+
+    &__logo {
+        text-transform: uppercase;
+        @include size (152px, 24px);
+        @include line (20px, 24px);
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        @include line (11px, 17px);
+
+        &_log {
+            padding: 5px 7px;
+            font-family: $text-mont;
+            @include line (14px, 17px);
+            margin-left: 37px;
+        }
+
+        &_sign {
+            height: 28px;
+            margin: -5px 13px;
+            padding: 8px 19px 21px 16px;
+            border: 2px solid $color-text;
+            border-radius: 2em;
+            font-family: $text-mont;
+            @include line (14px, 17px);
+        }
+    }
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 153.5px;
+
+    &__title {
+        @include size (470px, 126px);
+        @include line (52px, 61px);
+        text-align: center;
+    }
+
+    &__text {
+        @include line (21px, 32px);
+        margin: 22px 0 36px;
+        font-family: $text-mont;
+        height: 25px;
+
+    }
+
+    &__button {
+        background: #FF4E50;
+        border-radius: 40px;
+        border: none;
+        color: $color-text;
+        padding: 13px 17.5px 11px 19.5px;
+        @include line (14px, 17px);
+        font-family: $text-mont-bold;
+    }
+}
+
+main {
+    margin: 0 auto 100px;
+    width: 940px;
+}
+
+section h2 {
+    text-align: center;
+    @include line (26px, 32px);
+    margin: 89px 0 36px;
+    color: #444444;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text;
+
+
+    &__block {
+        @include size (300px, 400px);
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 25px;
+        padding-bottom: 23px;
+
+        &_step {
+            @include size (70px, 20px);
+            @include line (10px, 12px);
+            font-family: $text-mont;
+            text-transform: uppercase;
+            border-radius: 40px;
+            background-color: #FF4E50;
+            padding: 5px 12px 1px 15px;
+        }
+
+        &_title {
+            @include line (24px, 26px);
+            padding: 21px 0 8px;
+        }
+
+        &_text {
+            @include size (250px, 57px);
+            font-family: $text-roboto;
+            @include line (14px, 14px);
+            padding-top: 15px;
+        }
+    }
+
+
+}
+
+.first {
+    background-image: url('../images/Step\ 1\ image.png');
+}
+
+.second {
+    background-image: url('../images/Step\ 2\ image.png');
+    padding-bottom: 20px;
+}
+
+.third {
+    background-image: url('../images/Step\ 3\ image.png');
+}
+
+.partner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__block {
+        @include size (221px, 224px);
+        text-align: center;
+        margin-bottom: 14px;
+
+        &_photo {
+            @include size (120px, 120px);
+            border-radius: 50%;
+            margin: 0 auto 17px;
+        }
+
+        &_name {
+            @include line (14px, 17px);
+            margin-bottom: 22px;
+        }
+
+        &_biography {
+            font-family: $text-roboto;
+            @include size (221px, 38px);
+            @include line (14px, 14px);
+        }
+    }
+}
+
+.one {
+    background-image: url('../images/Bitmap.png');
+    position: relative;
+}
+
+.one::after {
+    content: "";
+    @include size (40px, 40px);
+    background-image: url("../images/Shape.png");
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid $color-text;
+    background-color: #FF4E50;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -1px;
+    right: -4px;
+}
+
+.two {
+    background-image: url('../images/Bitmap2.png');
+    position: relative;
+}
+
+.two::after {
+    content: "";
+    @include size (40px, 40px);
+    background-image: url("../images/Shape2.png");
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid $color-text;
+    background-color: #19D4CA;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -1px;
+    right: -4px;
+}
+
+.three {
+    background-image: url('../images/Bitmap3.png');
+    position: relative;
+}
+
+.three::after {
+    content: "";
+    @include size (40px, 40px);
+    background-image: url("../images/Shape3.png");
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid $color-text;
+    background-color: #FFA710;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -1px;
+    right: -4px;
+}
+
+.four {
+    background-image: url('../images/Bitmap4.png');
+    position: relative;
+}
+
+.four::after {
+    content: "";
+    @include size (40px, 40px);
+    background-image: url("../images/Shape4.png");
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid $color-text;
+    background-color: #667DF3;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -1px;
+    right: -4px;
+}
+
+.see__button {
+    @include size (180px, 40px);
+    background: $color-text;
+    border: 2px solid #FF4E50;
+    border-radius: 40px;
+    color: #FF4E50;
+    @include line (14px, 17px);
+    ;
+    font-family: $text-mont-bold;
+    margin-left: 382px;
+
+}
+
+.ideas h2 {
+    color: $color-text;
+    @include line (22px, 27px);
+    padding-top: 52px;
+}
+
+.extreme {
+    @include size (187px, 54px);
+    margin: 76px 57px;
+}
+
+.ideas {
+    &__first {
+        display: flex;
+        justify-content: space-between;
+
+        &_sport {
+            background-image: url('../images/Sport.png');
+            @include size (310px, 310px);
+        }
+
+        &_health {
+            margin: 0 20px;
+            background-image: url('../images/Healath.png');
+            @include size (310px, 310px);
+        }
+
+        &_extreme {
+            background-image: url('../images/Extreme.png');
+            @include size (310px, 310px);
+        }
+    }
+
+    &__second {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        &_games {
+            background-image: url('../images/Games.png');
+            @include size (310px, 310px);
+            margin-right: 20px;
+
+        }
+
+        &_culture {
+            background-image: url('../images/Culture.png');
+            @include size (640px, 310px);
+        }
+    }
+
+    &__third {
+        display: flex;
+        justify-content: space-between;
+
+        &_relax {
+            background-image: url('../images/Culture\ Copy.png');
+            @include size (640px, 310px);
+        }
+
+        &_travel {
+            background-image: url('../images/Games\ Copy.png');
+            @include size (310px, 310px);
+            margin-left: 20px;
+            font-size: 100%;
+        }
+    }
+}
+
+.text {
+    font-family: $text-roboto;
+    text-align: center;
+    @include line (18px, 14px);
+    margin-top: 53px;
+    margin-left: -6px;
+}
+
+input {
+    @include size (299px, 40px);
+    background: $color-text;
+    border: 1px solid #D4D4D4;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+    border-radius: 3px;
+    margin: 24px 0 0 229px;
+}
+
+input::placeholder {
+    font-family: $text-roboto;
+    @include line (14px, 16px);
+    color: #999999;
+    padding-left: 15px;
+    padding-top: 2px;
+}
+
+.search {
+    background: #FF4E50;
+    border-radius: 40px;
+    @include size (172.12px, 40px);
+    color: $color-text;
+    border: 1px solid #FF4E50;
+    margin-left: 5px;
+    @include line (14px, 17px);
+}
+
+hr {
+    background: #FF4E50;
+    height: 3px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    @include size (940px, 224px);
+    margin: 38px auto 0;
+
+    &__logo {
+        @include size (119px, 20px);
+        @include line (16px, 20px);
+        font-family: $text-mont;
+        font-weight: 900;
+        color: #FF4E50;
+    }
+
+    &__company,
+    &__partners {
+        @include line (14px, 17px);
+        margin-left: 98px;
+    }
+
+    &__partners {
+        margin-right: 265px;
+    }
+
+    &__company ul {
+        margin-top: 12px;
+    }
+
+    &__company li {
+        font-family: $text-roboto;
+        @include line (14px, 26px);
+        color: #999999;
+    }
+
+    &__icon-design {
+        @include line (10px, 12px);
+        letter-spacing: 1px;
+        color: #CCCCCC;
+        font-family: $text-mont-bold;
+        margin-left: 28px;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__icon-logo {
+        background-image: url('../images/logo.png');
+        @include size (110px, 24px);
+    }
+}
+
+.flex-block {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 700px;
+        background-image: url('../images/Background1.png');
+    }
+
+    .navbar {
+        padding-top: 46px;
+        margin-left: 48px;
+        display: flex;
+        justify-content: space-between;
+
+        &__menu {
+            &_log {
+                @include line (14px, 17px);
+                padding: 5px 21px;
+            }
+
+            &_sign {
+                margin: -5px 48px 0 0;
+                padding: 8px 19px 21px 16px;
+            }
+        }
+    }
+
+    .promo {
+        &__text {
+            line-height: 29px;
+        }
+
+        &__button {
+            padding: 12px 16.5px 8px 18.5px;
+        }
+    }
+
+    main {
+        margin: 0 auto;
+        width: 748px;
+    }
+
+    section h2 {
+        @include line (22px, 27px);
+        margin: 94px 0 35px;
+    }
+
+    .info {
+        &__block {
+            @include size (236px, 400px);
+            padding-left: 20px;
+            padding-bottom: 8px;
+
+            &_step {
+                padding: 5px 12px 1px 15px;
+            }
+
+            &_title {
+                @include size (196px, 29px);
+                @include line (24px, 14px);
+                padding: 46px 0 43px;
+            }
+
+            &_text {
+                @include size (196px, 76px);
+                padding: 14px 2px 1px;
+            }
+        }
+    }
+
+    .second-title {
+        padding: 17px 0 23px;
+    }
+
+    .second-text {
+        padding: 28px 1px 1px;
+    }
+
+    .partner {
+        flex-wrap: wrap;
+        margin: 0 129px 0 127px;
+
+        &__block {
+            @include size (236px, 205px);
+
+            &_name {
+                margin-bottom: 25px;
+            }
+
+            &_biography {
+                @include size (236px, 38px);
+            }
+        }
+    }
+
+    .bottom-margin {
+        margin-bottom: 56px;
+    }
+
+    .see__button {
+        margin: 26px 0 0 284px;
+    }
+
+    .ideas__first h2 {
+        @include size (206px, 54px);
+        @include line (22px, 27px);
+        margin: 75px 15px;
+    }
+
+    .extreme {
+        margin: 0;
+    }
+
+    .ideas {
+        &__first {
+            &_sport {
+                width: 236px;
+                background-image: url('../images/Sport1.png');
+            }
+
+            &_health {
+                width: 236px;
+            }
+
+            &_extreme {
+                width: 236px;
+            }
+        }
+
+        &__second {
+
+            &_games {
+                width: 236px;
+            }
+
+            &_culture {
+                width: 492px;
+            }
+        }
+
+        &__third {
+            &_relax {
+                width: 492px;
+            }
+
+            &_travel {
+                width: 236px;
+            }
+        }
+    }
+
+    .text {
+        margin-left: 3px;
+    }
+
+    input {
+        margin: 26px 0 99px 133px;
+    }
+
+    .footer {
+        justify-content: space-around;
+        width: 748px;
+        margin: 38px auto 0;
+
+        &__logo {
+            margin-left: -24px;
+        }
+
+        &__company {
+            margin-left: 0;
+        }
+
+        &__partners {
+            margin: 0 43px 0 -49px;
+        }
+    }
+
+    .flex-block {
+        margin: 6px -26px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 540px;
+        background-image: url('../images/Background2.png');
+    }
+
+    .navbar {
+        padding-top: 26px;
+        margin-left: 26px;
+        flex-direction: column-reverse;
+
+        &__logo {
+            padding: 99px 0 0 59px;
+        }
+
+        &__menu {
+
+            &_log {
+                @include line (14px, 17px);
+                padding: 5px 21px;
+            }
+
+            &_sign {
+                margin: -5px 84px 0 0;
+                padding: 8px 15px 21px 16px;
+            }
+        }
+    }
+
+    .promo {
+        margin-top: 51.5px;
+
+        &__title {
+            @include size (272px, 74px);
+            @include line (30px, 37px);
+        }
+
+        &__text {
+            @include line (18px, 25px);
+            margin: 3px 0 36px;
+            height: 31px;
+            text-align: center;
+        }
+
+        &__button {
+            padding: 12px 19.5px 8px 18.5px;
+            width: 280px;
+        }
+    }
+
+    main {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    section h2 {
+        margin: 34px 0 15px;
+    }
+
+    .info {
+        flex-direction: column;
+
+        &__block {
+            @include size (300px, 240px);
+            padding-left: 20px;
+            padding-bottom: 16px;
+            margin-bottom: 10px;
+
+            &_step {
+                padding: 5px 12px 1px 15px;
+            }
+
+            &_title {
+                @include size (250px, 58px);
+                padding: 47px 0 36px;
+            }
+
+            &_text {
+                @include size (250px, 57px);
+                padding: 17px 0px 0px;
+            }
+        }
+    }
+
+    .second-title {
+        padding: 37px 0 23px;
+    }
+
+    .second-text {
+        padding-top: 17px;
+    }
+
+    .partner {
+        margin: -5px 0px 0 32px;
+    }
+
+    .bottom-margin {
+        margin-bottom: 16px;
+    }
+
+    .margin-smallscreen {
+        margin-top: 19px;
+    }
+
+    .see__button {
+        @include size (280px, 40px);
+        margin: 22px 0 0 10px;
+    }
+
+    .small-screen {
+        @include size (280px, 54px);
+        margin: 36px 0 32px 10px;
+    }
+
+    .ideas__first h2 {
+        @include size (206px, 54px);
+        margin: 20px 48px;
+    }
+
+    .ideas h2 {
+        padding-top: 14px;
+    }
+
+    .extreme {
+        margin: 0;
+    }
+
+    .ideas {
+        &__first {
+            flex-wrap: wrap;
+
+            &_sport {
+                @include size (300px, 120px);
+                background-image: url('../images/Sport2.png');
+            }
+
+            &_health {
+                @include size (300px, 120px);
+                margin: 10px 0;
+                background-image: url('../images/Healath3.png');
+            }
+
+            &_extreme {
+                @include size (300px, 120px);
+                background-image: url('../images/Extreme3.png');
+            }
+        }
+
+        &__second {
+            margin: 10px 0;
+            flex-wrap: wrap;
+
+            &_games {
+                @include size (320px, 120px);
+                background-image: url('../images/Games3.png');
+                margin-right: 0;
+            }
+
+            &_culture {
+                margin-top: 10px;
+                @include size (300px, 120px);
+                background-image: url('../images/Culture3.png');
+            }
+        }
+
+        &__third {
+            flex-wrap: wrap;
+
+            &_relax {
+                @include size (300px, 120px);
+                margin: 0 0 10px;
+                background-image: url('../images/Culture\ Copy3.png');
+            }
+
+            &_travel {
+                @include size (300px, 120px);
+                background-image: url('../images/Games\ Copy3.png');
+                margin-left: 0;
+            }
+        }
+    }
+
+    .text {
+        margin: 22px 0 0 2px;
+    }
+
+    input {
+        @include size (280px, 40px);
+        margin: 18px 0 6px 11px;
+    }
+
+    .search {
+        @include size (280px, 40px);
+        margin-left: 11px;
+        margin-bottom: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        @include size (320px, 204px);
+        margin: 15px auto 0;
+
+        &__logo {
+            margin: 1px auto;
+        }
+
+        &__company,
+        &__partners {
+            margin: 6px 125px;
+        }
+
+        &__partners {
+            margin: -10px auto -10px;
+        }
+
+        &__company ul {
+            @include size (280px, 52px);
+            margin: 4px -111px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        &__company li {
+            padding-left: 15px;
+        }
+
+        &__icon-design {
+            margin: 0 0 6px 15px;
+        }
+    }
+
+    .flex-block {
+        margin: 16px auto;
+    }
+}
